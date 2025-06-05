@@ -1,0 +1,16 @@
+name: Azure Example
+
+on:
+  push:
+    branches:
+      - runners-test
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print message
+        run: echo "Este workflow está rodando no Azure!"
